@@ -19,7 +19,7 @@ const Home = () => {
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/notes', {
+      const response = await axios.get('krs-classes-2024-api.vercel.app/notes', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -37,7 +37,7 @@ const Home = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:5000/notes/${noteId}`, {
+      await axios.delete(`krs-classes-2024-api.vercel.app/${noteId}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -60,7 +60,7 @@ const Home = () => {
 
   const addNewNote = async () => {
     try {
-      await axios.post('http://localhost:5000/notes', {
+      await axios.post('krs-classes-2024-api.vercel.app/notes', {
         title,
         content
       }, {
@@ -78,7 +78,7 @@ const Home = () => {
 
   const editNote = async () => {
     try {
-      await axios.patch(`http://localhost:5000/notes/${noteData._id}`, {
+      await axios.patch(`krs-classes-2024-api.vercel.app/notes/${noteData._id}`, {
         title,
         content
       }, {
