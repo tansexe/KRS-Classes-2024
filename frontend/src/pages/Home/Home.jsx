@@ -160,7 +160,7 @@ const Home = () => {
           <div className="container mx-auto mt-8 flex flex-col">
             <h1 className="text-white text-2xl py-5 px-2">All Notes</h1>
             <div className="">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-24">
                 {notes && notes.length > 0 ? (
                   notes.map((note) => (
                     <div
