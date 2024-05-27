@@ -16,8 +16,8 @@ connectDB()
 app.use(express.json())
 app.use(cors(
     {
-        origin: ["https://krs-classes-2024-client.vercel.app/signin"],
-        methods: ["POST", "GET"],
+        origin: ["*"],
+        methods: ["POST", "GET","PATCH","DELETE"],
         credentials: true
     }
 ));
