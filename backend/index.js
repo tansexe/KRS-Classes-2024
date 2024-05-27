@@ -11,10 +11,15 @@ connectDB();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://krs-classes-2024-client.vercel.app"],
+    origin: [
+        "https://krs-classes-2024-client.vercel.app",
+        "https://krs-classes-2024-client-59jtk0cr0-raghav-jaiswals-projects.vercel.app"
+    ],
     methods: ["POST", "GET", "PATCH", "DELETE"],
     credentials: true
 }));
+
+app.options('*', cors()); // Handle preflight requests
 
 app.use('/users', userRoutes);
 app.use('/notes', noteRoutes);
