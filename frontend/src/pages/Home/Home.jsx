@@ -37,7 +37,7 @@ const Home = () => {
     }
 
     try {
-      await axios.delete(`https://krs-classes-2024-api.vercel.app/${noteId}`, {
+      await axios.delete(`https://krs-classes-2024-api.vercel.app/notes/${noteId}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
