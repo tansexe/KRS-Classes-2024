@@ -160,7 +160,7 @@ const Home = () => {
           <div className="container mx-auto mt-8 flex flex-col">
             <h1 className="text-white text-2xl py-5 px-2">All Notes</h1>
             <div className="">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-60">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 {notes && notes.length > 0 ? (
                   notes.map((note) => (
                     <div
@@ -215,7 +215,7 @@ const Home = () => {
 
       {/* Add Note button */}
       <button
-        className="fixed bottom-8 right-8 bg-white/10 backdrop-blur-lg drop-shadow hover:shadow-xl transition-all ease-in-out text-white rounded-md p-4"
+        className="fixed bottom-8 right-8 bg-white/10 backdrop-blur-lg drop-shadow hover:shadow-xl transition-all ease-in-out text-white rounded-md p-4 z-50"
         onClick={() => openAddEditModal()}
       >
         <MdAdd className="text-2xl" />
