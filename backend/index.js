@@ -14,11 +14,13 @@ dotenv.config('')
 connectDB()
 
 app.use(express.json())
-app.use(
-    cors({
-        origin:"*"
-    })
-);
+app.use(cors(
+    {
+        origin: ["https://krs-classes-2024-client.vercel.app/signin"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 app.use('/users', userRoutes)
 app.use('/notes', noteRoutes)
 

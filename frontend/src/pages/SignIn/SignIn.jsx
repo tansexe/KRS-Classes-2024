@@ -26,7 +26,7 @@ const SignIn = () => {
         setError('')
 
         try {
-            const response = await axios.post('krs-classes-2024-api.vercel.app/users/login', {
+            const response = await axios.post('https://krs-classes-2024-api.vercel.app/users/login', {
                 email,
                 pass:password
             })

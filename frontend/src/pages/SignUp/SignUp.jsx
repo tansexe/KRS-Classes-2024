@@ -37,7 +37,7 @@ const SignUp = () => {
     }
 
     try {
-      await axios.post('krs-classes-2024-api.vercel.app/users/register', {
+      await axios.post('https://krs-classes-2024-api.vercel.app/users/register', {
         name,
         email,
         pass: password,
