@@ -22,6 +22,10 @@ app.use(
 app.use('/users', userRoutes)
 app.use('/notes', noteRoutes)
 
+app.get("/",(req,res)=>{
+    res.json("hello")
+})
+
 app.get('/health', (req, res) => {
     res.json({ message: 'OK' }).status(200)
 })
