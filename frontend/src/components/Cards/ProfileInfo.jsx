@@ -3,19 +3,26 @@ import { getInitials } from '../../utils/helper';
 import { useNavigate } from 'react-router-dom';
 
 const ProfileInfo = () => {
-  const user = JSON.parse(localStorage.getItem('user'));
   const navigate = useNavigate();
+  const userString = localStorage.getItem('user');
+  let user;
+
+  try {
+    user = userString ? JSON.parse(userString) : null;
+  } catch (error) {
+    console.error('Error parsing user data from localStorage:', error);
+    user = null;
+  }
 
   if (!user) {
-    return null; // or you can render a loading state or an empty component
+    return null;
   }
 
   const handleLogout = () => {
-    // Remove user data from local storage
+   
     localStorage.removeItem('user');
-    localStorage.removeItem('token'); // Assuming you have a token stored as well
-
-    // Navigate to the sign-in page
+    localStorage.removeItem('token'); 
+    
     navigate('/signin');
   };
 
