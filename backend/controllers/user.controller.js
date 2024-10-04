@@ -18,7 +18,7 @@ const register = async (req, res) => {
     if (!validators.checkEmail(email)) {
       return res.status(400).send({ error: "invalid email" });
     }
-    if (!validators.checkPass(pass)) {
+    if (!validators.checkPass(pass)) { 
       return res.status(400).send({ error: "invalid password" });
     }
     const user = await UserModel.findOne({ email });
